@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Playground</title>
+</head>
+
+<body>
+    <h1>Machine Learning Playground</h1>
+    <hr>
+    <!--
+        # By default Jinja2 (the template engine for Flask) assumes input inside of { } is unsafe 
+        and will not allow js or html inside them. You can solve this by using the safe filter 
+        inside your template. This will tell Jinja2 that the content is safe to render as is.
+    -->
+
+    <h2>Dataframe</h2>
+    {{ df | safe }}
+
+    <h2>Description</h2>
+    {{ info | safe }}
+
+    <h2>Plot</h2>
+    <img src="data:image/png;base64,{{ plot }}" width="500" />
+</body>
+
+</html>
